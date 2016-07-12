@@ -1,0 +1,363 @@
+swarmAgents.cpp:29:72: error: no matching function for call to ‘ros::NodeHandle::subscribe(const char [15], int, <unresolved overloaded function type>)’
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note: candidates are:
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:389:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), T*, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, void(T::*fp)(M), T* obj, 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:389:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   candidate expects 5 arguments, 3 provided
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:400:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M)const, T*, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const, T* obj, 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:400:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   types ‘void (T::)(M)const’ and ‘void (App::)(const ConstPtr&) {aka void (App::)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’ have incompatible cv-qualifiers
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:452:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), T*, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:452:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   candidate expects 5 arguments, 3 provided
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:462:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&)const, T*, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:462:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   types ‘void (T::)(const boost::shared_ptr<const M>&)const’ and ‘void (App::)(const ConstPtr&) {aka void (App::)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’ have incompatible cv-qualifiers
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:516:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), const boost::shared_ptr<U>&, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, void(T::*fp)(M), 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:516:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   candidate expects 5 arguments, 3 provided
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:527:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M)const, const boost::shared_ptr<U>&, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const, 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:527:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   types ‘void (T::)(M)const’ and ‘void (App::)(const ConstPtr&) {aka void (App::)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’ have incompatible cv-qualifiers
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:581:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), const boost::shared_ptr<U>&, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:581:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   candidate expects 5 arguments, 3 provided
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:592:14: note: template<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&)const, const boost::shared_ptr<U>&, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, 
+              ^
+/opt/ros/jade/include/ros/node_handle.h:592:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   types ‘void (T::)(const boost::shared_ptr<const M>&)const’ and ‘void (App::)(const ConstPtr&) {aka void (App::)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’ have incompatible cv-qualifiers
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:643:14: note: template<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(M), const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, void(*fp)(M), const TransportHints& transport_hints = TransportHints())
+              ^
+/opt/ros/jade/include/ros/node_handle.h:643:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   mismatched types ‘void (*)(M)’ and ‘void (App::*)(const ConstPtr&) {aka void (App::*)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:691:14: note: template<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(const boost::shared_ptr<const M>&), const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, void(*fp)(const boost::shared_ptr<M const>&), const TransportHints& transport_hints = TransportHints())
+              ^
+/opt/ros/jade/include/ros/node_handle.h:691:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   mismatched types ‘void (*)(const boost::shared_ptr<const M>&)’ and ‘void (App::*)(const ConstPtr&) {aka void (App::*)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:737:14: note: template<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(const boost::shared_ptr<const M>&)>&, const VoidConstPtr&, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, const boost::function<void (const boost::shared_ptr<M const>&)>& callback,
+              ^
+/opt/ros/jade/include/ros/node_handle.h:737:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   ‘void (App::*)(const ConstPtr&) {aka void (App::*)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’ is not derived from ‘const boost::function<void(const boost::shared_ptr<const M>&)>’
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:786:14: note: template<class M, class C> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(C)>&, const VoidConstPtr&, const ros::TransportHints&)
+   Subscriber subscribe(const std::string& topic, uint32_t queue_size, const boost::function<void (C)>& callback,
+              ^
+/opt/ros/jade/include/ros/node_handle.h:786:14: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:29:72: note:   ‘void (App::*)(const ConstPtr&) {aka void (App::*)(const boost::shared_ptr<const multi_apriltags_tracker::april_tag_pos_<std::allocator<void> > >&)}’ is not derived from ‘const boost::function<void(C)>’
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:29:72: note:   could not resolve address from overloaded function ‘((App*)this)->App::posCallBack’
+In file included from /opt/ros/jade/include/ros/ros.h:45:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/node_handle.h:823:14: note: ros::Subscriber ros::NodeHandle::subscribe(ros::SubscribeOptions&)
+   Subscriber subscribe(SubscribeOptions& ops);
+              ^
+/opt/ros/jade/include/ros/node_handle.h:823:14: note:   candidate expects 1 argument, 3 provided
+swarmAgents.cpp: In member function ‘void App::posCallBack(const ConstPtr&)’:
+swarmAgents.cpp:34:28: error: ‘const ConstPtr’ has no member named ‘id’
+     for(int i = 0; i < msg.id.size()); i++){
+                            ^
+swarmAgents.cpp:34:37: error: expected ‘;’ before ‘)’ token
+     for(int i = 0; i < msg.id.size()); i++){
+                                     ^
+swarmAgents.cpp:34:40: error: ‘i’ was not declared in this scope
+     for(int i = 0; i < msg.id.size()); i++){
+                                        ^
+swarmAgents.cpp:34:43: error: expected ‘;’ before ‘)’ token
+     for(int i = 0; i < msg.id.size()); i++){
+                                           ^
+swarmAgents.cpp:45:3: error: expected ‘}’ at end of input
+   }
+   ^
+swarmAgents.cpp: In member function ‘void App::init()’:
+swarmAgents.cpp:48:14: error: ‘String’ is not a member of ‘std’
+     std::map<std::String, std::String> spheroMap;
+              ^
+swarmAgents.cpp:48:14: note: suggested alternative:
+In file included from swarmAgents.cpp:7:0:
+/opt/ros/jade/include/std_msgs/String.h:46:52: note:   ‘std_msgs::String’
+ typedef ::std_msgs::String_<std::allocator<void> > String;
+                                                    ^
+swarmAgents.cpp:48:14: error: ‘String’ is not a member of ‘std’
+     std::map<std::String, std::String> spheroMap;
+              ^
+swarmAgents.cpp:48:14: note: suggested alternative:
+In file included from swarmAgents.cpp:7:0:
+/opt/ros/jade/include/std_msgs/String.h:46:52: note:   ‘std_msgs::String’
+ typedef ::std_msgs::String_<std::allocator<void> > String;
+                                                    ^
+swarmAgents.cpp:48:27: error: ‘String’ is not a member of ‘std’
+     std::map<std::String, std::String> spheroMap;
+                           ^
+swarmAgents.cpp:48:27: note: suggested alternative:
+In file included from swarmAgents.cpp:7:0:
+/opt/ros/jade/include/std_msgs/String.h:46:52: note:   ‘std_msgs::String’
+ typedef ::std_msgs::String_<std::allocator<void> > String;
+                                                    ^
+swarmAgents.cpp:48:27: error: ‘String’ is not a member of ‘std’
+     std::map<std::String, std::String> spheroMap;
+                           ^
+swarmAgents.cpp:48:27: note: suggested alternative:
+In file included from swarmAgents.cpp:7:0:
+/opt/ros/jade/include/std_msgs/String.h:46:52: note:   ‘std_msgs::String’
+ typedef ::std_msgs::String_<std::allocator<void> > String;
+                                                    ^
+swarmAgents.cpp:48:38: error: template argument 1 is invalid
+     std::map<std::String, std::String> spheroMap;
+                                      ^
+swarmAgents.cpp:48:38: error: template argument 2 is invalid
+swarmAgents.cpp:48:38: error: template argument 3 is invalid
+swarmAgents.cpp:48:38: error: template argument 4 is invalid
+swarmAgents.cpp:48:49: error: invalid type in declaration before ‘;’ token
+     std::map<std::String, std::String> spheroMap;
+                                                 ^
+swarmAgents.cpp:50:24: error: no matching function for call to ‘begin(int&)’
+     for (auto spheroP: spheroMap){
+                        ^
+swarmAgents.cpp:50:24: note: candidates are:
+In file included from /usr/include/c++/4.8/string:51:0,
+                 from /usr/include/c++/4.8/stdexcept:39,
+                 from /usr/include/c++/4.8/array:38,
+                 from /usr/include/c++/4.8/tuple:39,
+                 from /usr/include/c++/4.8/bits/stl_map.h:63,
+                 from /usr/include/c++/4.8/map:61,
+                 from swarmAgents.cpp:1:
+/usr/include/c++/4.8/bits/range_access.h:87:5: note: template<class _Tp, long unsigned int _Nm> _Tp* std::begin(_Tp (&)[_Nm])
+     begin(_Tp (&__arr)[_Nm])
+     ^
+/usr/include/c++/4.8/bits/range_access.h:87:5: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:50:24: note:   mismatched types ‘_Tp [_Nm]’ and ‘int’
+     for (auto spheroP: spheroMap){
+                        ^
+In file included from /usr/include/c++/4.8/string:51:0,
+                 from /usr/include/c++/4.8/stdexcept:39,
+                 from /usr/include/c++/4.8/array:38,
+                 from /usr/include/c++/4.8/tuple:39,
+                 from /usr/include/c++/4.8/bits/stl_map.h:63,
+                 from /usr/include/c++/4.8/map:61,
+                 from swarmAgents.cpp:1:
+/usr/include/c++/4.8/bits/range_access.h:58:5: note: template<class _Container> decltype (__cont.begin()) std::begin(const _Container&)
+     begin(const _Container& __cont) -> decltype(__cont.begin())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:58:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.begin()) std::begin(const _Container&) [with _Container = int]’:
+swarmAgents.cpp:50:24:   required from here
+/usr/include/c++/4.8/bits/range_access.h:58:5: error: request for member ‘begin’ in ‘__cont’, which is of non-class type ‘const int’
+/usr/include/c++/4.8/bits/range_access.h:48:5: note: template<class _Container> decltype (__cont.begin()) std::begin(_Container&)
+     begin(_Container& __cont) -> decltype(__cont.begin())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:48:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.begin()) std::begin(_Container&) [with _Container = int]’:
+swarmAgents.cpp:50:24:   required from here
+/usr/include/c++/4.8/bits/range_access.h:48:5: error: request for member ‘begin’ in ‘__cont’, which is of non-class type ‘int’
+In file included from /usr/include/c++/4.8/bits/stl_map.h:62:0,
+                 from /usr/include/c++/4.8/map:61,
+                 from swarmAgents.cpp:1:
+/usr/include/c++/4.8/initializer_list:89:5: note: template<class _Tp> constexpr const _Tp* std::begin(std::initializer_list<_Tp>)
+     begin(initializer_list<_Tp> __ils) noexcept
+     ^
+/usr/include/c++/4.8/initializer_list:89:5: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:50:24: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+     for (auto spheroP: spheroMap){
+                        ^
+swarmAgents.cpp:50:24: error: no matching function for call to ‘end(int&)’
+swarmAgents.cpp:50:24: note: candidates are:
+In file included from /usr/include/c++/4.8/string:51:0,
+                 from /usr/include/c++/4.8/stdexcept:39,
+                 from /usr/include/c++/4.8/array:38,
+                 from /usr/include/c++/4.8/tuple:39,
+                 from /usr/include/c++/4.8/bits/stl_map.h:63,
+                 from /usr/include/c++/4.8/map:61,
+                 from swarmAgents.cpp:1:
+/usr/include/c++/4.8/bits/range_access.h:97:5: note: template<class _Tp, long unsigned int _Nm> _Tp* std::end(_Tp (&)[_Nm])
+     end(_Tp (&__arr)[_Nm])
+     ^
+/usr/include/c++/4.8/bits/range_access.h:97:5: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:50:24: note:   mismatched types ‘_Tp [_Nm]’ and ‘int’
+     for (auto spheroP: spheroMap){
+                        ^
+In file included from /usr/include/c++/4.8/string:51:0,
+                 from /usr/include/c++/4.8/stdexcept:39,
+                 from /usr/include/c++/4.8/array:38,
+                 from /usr/include/c++/4.8/tuple:39,
+                 from /usr/include/c++/4.8/bits/stl_map.h:63,
+                 from /usr/include/c++/4.8/map:61,
+                 from swarmAgents.cpp:1:
+/usr/include/c++/4.8/bits/range_access.h:78:5: note: template<class _Container> decltype (__cont.end()) std::end(const _Container&)
+     end(const _Container& __cont) -> decltype(__cont.end())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:78:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.end()) std::end(const _Container&) [with _Container = int]’:
+swarmAgents.cpp:50:24:   required from here
+/usr/include/c++/4.8/bits/range_access.h:78:5: error: request for member ‘end’ in ‘__cont’, which is of non-class type ‘const int’
+/usr/include/c++/4.8/bits/range_access.h:68:5: note: template<class _Container> decltype (__cont.end()) std::end(_Container&)
+     end(_Container& __cont) -> decltype(__cont.end())
+     ^
+/usr/include/c++/4.8/bits/range_access.h:68:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/range_access.h: In substitution of ‘template<class _Container> decltype (__cont.end()) std::end(_Container&) [with _Container = int]’:
+swarmAgents.cpp:50:24:   required from here
+/usr/include/c++/4.8/bits/range_access.h:68:5: error: request for member ‘end’ in ‘__cont’, which is of non-class type ‘int’
+In file included from /usr/include/c++/4.8/bits/stl_map.h:62:0,
+                 from /usr/include/c++/4.8/map:61,
+                 from swarmAgents.cpp:1:
+/usr/include/c++/4.8/initializer_list:99:5: note: template<class _Tp> constexpr const _Tp* std::end(std::initializer_list<_Tp>)
+     end(initializer_list<_Tp> __ils) noexcept
+     ^
+/usr/include/c++/4.8/initializer_list:99:5: note:   template argument deduction/substitution failed:
+swarmAgents.cpp:50:24: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+     for (auto spheroP: spheroMap){
+                        ^
+swarmAgents.cpp: In member function ‘void App::run()’:
+swarmAgents.cpp:65:59: error: no matching function for call to ‘std::thread::thread(<unresolved overloaded function type>, const int&)’
+         threads.push_back(std::thread(moveAgent,pair.first));
+                                                           ^
+swarmAgents.cpp:65:59: note: candidates are:
+In file included from swarmAgents.cpp:4:0:
+/usr/include/c++/4.8/thread:133:7: note: std::thread::thread(_Callable&&, _Args&& ...) [with _Callable = void (App::*)(int); _Args = {const int&}]
+       thread(_Callable&& __f, _Args&&... __args)
+       ^
+/usr/include/c++/4.8/thread:133:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘void (App::*&&)(int)’
+/usr/include/c++/4.8/thread:128:5: note: std::thread::thread(std::thread&&)
+     thread(thread&& __t) noexcept
+     ^
+/usr/include/c++/4.8/thread:128:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/c++/4.8/thread:122:5: note: std::thread::thread()
+     thread() noexcept = default;
+     ^
+/usr/include/c++/4.8/thread:122:5: note:   candidate expects 0 arguments, 2 provided
+swarmAgents.cpp:68:24: error: use of deleted function ‘std::thread::thread(std::thread&)’
+       for(auto thread: threads){
+                        ^
+In file included from swarmAgents.cpp:4:0:
+/usr/include/c++/4.8/thread:125:5: error: declared here
+     thread(thread&) = delete;
+     ^
+swarmAgents.cpp: In member function ‘void App::moveAgent(int)’:
+swarmAgents.cpp:79:40: error: no matching function for call to ‘Agent::move()’
+     Vector result = myAgents[id]->move();
+                                        ^
+swarmAgents.cpp:79:40: note: candidate is:
+In file included from swarmAgents.cpp:13:0:
+Agent.h:53:10: note: Vector Agent::move(std::map<int, Agent*>, std::vector<Polygon*>, std::vector<Vector>)
+   Vector move(std::map<int, Agent*>, std::vector<Polygon*> polygons,  std::vector<Vector> points);
+          ^
+Agent.h:53:10: note:   candidate expects 3 arguments, 0 provided
+swarmAgents.cpp:18:15: error: expected primary-expression before ‘=’ token
+ #define SCALE = 1;
+               ^
+swarmAgents.cpp:82:33: note: in expansion of macro ‘SCALE’
+     twist.linear.x = result.x * SCALE;
+                                 ^
+swarmAgents.cpp:18:15: error: expected primary-expression before ‘=’ token
+ #define SCALE = 1;
+               ^
+swarmAgents.cpp:83:33: note: in expansion of macro ‘SCALE’
+     twist.linear.y = result.y * SCALE;
+                                 ^
+swarmAgents.cpp:88:5: error: ‘cmdPub’ was not declared in this scope
+     cmdPub.publish(twist);
+     ^
+swarmAgents.cpp:89:5: error: ‘myAgent’ was not declared in this scope
+     myAgent[id]->averageRadisu(numToAgent);
+     ^
+swarmAgents.cpp: In function ‘int main(int, char**)’:
+swarmAgents.cpp:105:7: error: use of deleted function ‘App::App()’
+   App app;
+       ^
+swarmAgents.cpp:21:7: note: ‘App::App()’ is implicitly deleted because the default definition would be ill-formed:
+ class App{
+       ^
+swarmAgents.cpp:29:72: note: initializer for ‘ros::Subscriber App::camSub’ is invalid
+   ros::Subscriber camSub = n.subscribe("/april_tag_pos", 1, posCallBack);//TODO get real topic name
+                                                                        ^
+swarmAgents.cpp:21:7: error: no matching function for call to ‘ros::Rate::Rate()’
+ class App{
+       ^
+swarmAgents.cpp:21:7: note: candidates are:
+In file included from /opt/ros/jade/include/ros/ros.h:39:0,
+                 from swarmAgents.cpp:6:
+/opt/ros/jade/include/ros/rate.h:59:12: note: ros::Rate::Rate(const ros::Duration&)
+   explicit Rate(const Duration&);
+            ^
+/opt/ros/jade/include/ros/rate.h:59:12: note:   candidate expects 1 argument, 0 provided
+/opt/ros/jade/include/ros/rate.h:58:3: note: ros::Rate::Rate(double)
+   Rate(double frequency);
+   ^
+/opt/ros/jade/include/ros/rate.h:58:3: note:   candidate expects 1 argument, 0 provided
+/opt/ros/jade/include/ros/rate.h:51:20: note: constexpr ros::Rate::Rate(const ros::Rate&)
+ class ROSTIME_DECL Rate
+                    ^
+/opt/ros/jade/include/ros/rate.h:51:20: note:   candidate expects 1 argument, 0 provided
+/opt/ros/jade/include/ros/rate.h:51:20: note: constexpr ros::Rate::Rate(ros::Rate&&)
+/opt/ros/jade/include/ros/rate.h:51:20: note:   candidate expects 1 argument, 0 provided

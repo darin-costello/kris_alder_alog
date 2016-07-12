@@ -56,8 +56,12 @@ Vector Vector::scalarMultiply(double f) {
 }
 
 Vector Vector::rotate(double angle){
-  double nx = cos(angle) * x - sin(angle) * y;
-  double ny = sin(angle) * x - cos(angle) * y;
+  double nx = (cos(angle) * x) - (sin(angle) * y);
+  double ny = (sin(angle) * x) - (cos(angle) * y);
 
   return Vector(nx, ny);
+}
+
+bool Vector::equals(Vector v){
+  return x == v.x && y == v.y;
 }

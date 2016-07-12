@@ -12,5 +12,5 @@ Connection::Connection(Vector diff, double dist){
 }
 
 bool operator< (const Connection& l, const Connection& r){
-  return l.dist < r.dist;
+  return l.dist >= r.dist;
 }

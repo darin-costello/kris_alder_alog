@@ -15,10 +15,13 @@ public:
   bool onLine(Vector);
   bool intersects(Edge);
 
+  bool equals(Edge);
+
 };
 
 class Polygon {
 public:
+  Polygon(std::vector<Vector>);
   std::vector<Vector> vertices;
 
   std::vector<Edge> edges();

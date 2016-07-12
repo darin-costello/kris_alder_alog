@@ -9,8 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
 	message_generation
 	roscpp
 	multi_apriltags_tracker
-	sphero_swarm_node
-	std_msgs
+	sphero_swarm_node 
 )
 
 ## System dependencies are found with CMake's conventions
@@ -47,11 +46,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  changeLeader.msg
+# add_message_files(
+#   FILES
+#   Message1.msg
 #   Message2.msg
- )
+# )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -68,11 +67,10 @@ add_message_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-   std_msgs  # Or other packages containing msgs
-	 geometry_msgs
-)
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs  # Or other packages containing msgs
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -117,15 +115,14 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-	include
+	include 
 	${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
-add_library(swarm_library
-   src/Agent.cpp src/Connection.cpp src/Polygon.cpp src/Vector.cpp
- )
-
+# add_library(krisAlgo
+  
+ #)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -133,7 +130,7 @@ add_library(swarm_library
 # add_dependencies(krisAlgo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-add_executable(kris_alder_algo_node src/swarmAgents.cpp  )
+add_executable(kris_alder_algo_node src/swarmAgents.cpp  src/Agent.cpp src/Connection.cpp src/Polygon.cpp src/Vector.cpp )
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -142,7 +139,6 @@ add_executable(kris_alder_algo_node src/swarmAgents.cpp  )
 ## Specify libraries to link a library or executable target against
  target_link_libraries(kris_alder_algo_node
    ${catkin_LIBRARIES}
-   swarm_library
  )
 
 #############

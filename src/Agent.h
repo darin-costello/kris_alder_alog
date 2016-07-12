@@ -2,7 +2,7 @@
 #define AGENT_H
 
 
-#define RADCAHGNEAMT 0.001
+#define RADCAHGNEAMT 1.0
 
 
 #include <vector>
@@ -17,26 +17,27 @@
 
 class Agent {
 public:
-  enum AgentStates {StateSurround, StateTravelFollow, StateTravelLead };
-  static constexpr double RADARDIST = 120;
+  enum AgentStates {StateSurround = 0, StateTravelFollow = 1, StateTravelLead = 2,
+  StateTransition = -1};
+  static constexpr double RADARDIST = 300;
   int id;
 
   Vector pos;
   Vector heading;
 
   int numConnections = 3;
-  int numRays = 20;
+  int numRays = 180;
   std::vector<int> neighbours = std::vector<int>();
 
-  double IARadius = 0.0;
-  double wallRadius = 80.0;
-  double sensorDistance = 120.0;
+  double IARadius = 80.0;
+  double wallRadius = 60.0;
+  double sensorDistance = 600.0;
 
   double maxAcceleration;
   double maxVelocity = 80;
 
-  double averageDist = 60;
-  double minIARadius = 70;
+  double averageDist = 80;
+  double minIARadius = 80;
 
   int leader = -1;
 

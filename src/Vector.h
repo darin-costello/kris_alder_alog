@@ -20,6 +20,8 @@ public:
 // Vector FixLength();
   Vector rotate(double);
 
+  bool equals(Vector v);
+
 };
 
 #endif
