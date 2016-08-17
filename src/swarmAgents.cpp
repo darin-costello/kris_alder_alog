@@ -8,7 +8,7 @@
 #include "std_msgs/String.h"
 
 #include <geometry_msgs/Pose2D.h>
-#include "multi_apriltags_tracker/april_tag_pos.h"
+#include "mm_apriltags_tracker/april_tag_pos.h"
 #include "sphero_swarm_node/SpheroTwist.h"
 #include "kris_alder_algo/changeLeader.h"
 
@@ -36,7 +36,7 @@ public:
   ros::Subscriber camSub;
   ros::Subscriber leadSub;
   int status = 0;
-  void posCallBack(const multi_apriltags_tracker::april_tag_pos::ConstPtr& msg);
+  void posCallBack(const mm_apriltags_tracker::april_tag_pos::ConstPtr& msg);
   void leadCallBack(const kris_alder_algo::changeLeader::ConstPtr& msg);
   void init();
   void run();
@@ -72,7 +72,7 @@ void App::leadCallBack(const kris_alder_algo::changeLeader::ConstPtr& msg){
 }
 
 
-void App::posCallBack(const multi_apriltags_tracker::april_tag_pos::ConstPtr& msg){
+void App::posCallBack(const mm_apriltags_tracker::april_tag_pos::ConstPtr& msg){
 
   if(status == 0){
     return;

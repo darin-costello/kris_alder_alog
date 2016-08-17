@@ -8,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
 	geometry_msgs
 	message_generation
 	roscpp
-	multi_apriltags_tracker
+	mm_apriltags_tracker
 	sphero_swarm_node
 	std_msgs
 )
