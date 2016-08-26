@@ -1,0 +1,10 @@
+http://scholarsarchive.byu.edu/studentpub/176/
+http://ieeexplore.ieee.org/document/7321675/?arnumber=7321675&tag=1
+
+This is an implementation of a swarm control system created by Kris Alder. It was built for a swarm of spheros, and depends on the mm_april_tag package.
+
+April_tags greater than 30 are obstacles, all lower ones are assumed to be robots.
+
+
+TODO:
+The current limit for the number of robots is 5 due to built in bluetooth limitations, and stability with sphero connections. The solution is to use multiple computers for each set of 5 spheros, however I never figured out what to remap to what to avoid conflicts.
